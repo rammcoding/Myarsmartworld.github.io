@@ -3,91 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Smart World | Software & Innovation</title>
+    <title>AR Smart World | Innovation & Intelligence</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0f172a;
             --accent: #3b82f6;
             --bg: #ffffff;
-            --card-bg: #f1f5f9;
+            --card-bg: #f8fafc;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background: #fff; }
 
-        /* Header */
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 800; }
+        .nav-logo img { height: 40px; margin-right: 10px; }
+
+        .nav-links a { margin-left: 20px; text-decoration: none; color: #64748b; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section */
         header { 
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80');
-            background-size: cover; background-position: center;
-            color: white; padding: 120px 20px; text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            color: white; padding: 100px 20px; text-align: center;
         }
-        .hero-content h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
-        .hero-content p { font-size: 1.2rem; max-width: 700px; margin: auto; opacity: 0.9; }
+        .main-logo { width: 180px; margin-bottom: 20px; border-radius: 50%; box-shadow: 0 0 30px rgba(59, 130, 246, 0.5); }
+        .hero-content h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -1px; }
+        .hero-content p { font-size: 1.1rem; max-width: 600px; margin: auto; opacity: 0.8; margin-bottom: 30px; }
 
-        /* Section Styling */
-        .container { max-width: 1100px; margin: auto; padding: 80px 20px; }
-        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; color: var(--primary); }
+        /* Content */
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+        h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: var(--primary); }
 
-        /* Software Grid */
-        .software-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .software-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .software-card { 
-            background: var(--card-bg); padding: 30px; border-radius: 20px; 
-            transition: 0.3s; border: 1px solid #e2e8f0;
+            background: var(--card-bg); padding: 30px; border-radius: 15px; 
+            transition: 0.3s; border: 1px solid #e2e8f0; position: relative;
         }
-        .software-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .version { color: var(--accent); font-weight: bold; font-size: 0.9rem; }
-        .software-card h3 { margin: 10px 0; font-size: 1.5rem; }
+        .software-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .version-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; }
+        .software-card h3 { margin: 10px 0; font-size: 1.4rem; }
         
-        /* Download Button */
         .dl-btn { 
             display: inline-block; background: var(--accent); color: white; 
-            padding: 10px 25px; border-radius: 8px; text-decoration: none; 
-            font-weight: 600; margin-top: 20px; transition: 0.3s;
+            padding: 12px 24px; border-radius: 8px; text-decoration: none; 
+            font-weight: 600; margin-top: 20px; width: 100%; text-align: center; transition: 0.3s;
         }
         .dl-btn:hover { background: #2563eb; }
 
-        /* Footer */
-        footer { background: var(--primary); color: #94a3b8; padding: 40px; text-align: center; }
+        footer { background: #f1f5f9; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
 
+    <nav>
+        <a href="#" class="nav-logo">
+            <img src="logo.png" alt="AR Smart World Logo">
+            <span>AR SMART WORLD</span>
+        </a>
+        <div class="nav-links">
+            <a href="#software">Software</a>
+            <a href="#updates">Updates</a>
+            <a href="mailto:contact@arsmartworld.com">Contact</a>
+        </div>
+    </nav>
+
     <header>
+        <img src="logo.png" alt="AR Smart World" class="main-logo">
         <div class="hero-content">
-            <h1>AR SMART WORLD</h1>
-            <p>Next-Generation Software Development & Innovative Technological Solutions. Stay updated with our latest releases.</p>
+            <h1>Innovation & Intelligence</h1>
+            <p>New generation software builds and technological updates. Download our latest releases below.</p>
         </div>
     </header>
 
     <div class="container" id="software">
-        <h2>Latest Software & Updates</h2>
+        <h2>Software Repository</h2>
         <div class="software-grid">
             <div class="software-card">
-                <span class="version">Latest Update: v2.4</span>
+                <span class="version-tag">Build: 2026.1</span>
                 <h3>System Optimizer</h3>
-                <p>Improve your hardware performance with our new generation optimization algorithm.</p>
-                <a href="#" class="dl-btn">Download Now</a>
+                <p>New generation software build for high-performance computing and system stability.</p>
+                <a href="#" class="dl-btn">Download Update</a>
             </div>
 
             <div class="software-card">
-                <span class="version">Update: v1.0.2</span>
+                <span class="version-tag">Build: 2026.1</span>
                 <h3>Secure Connect</h3>
-                <p>Encryption software designed to protect your data across all digital platforms.</p>
-                <a href="#" class="dl-btn">Download Now</a>
+                <p>Advanced encryption update to ensure safe data transfers and user privacy.</p>
+                <a href="#" class="dl-btn">Download Update</a>
             </div>
 
             <div class="software-card">
-                <span class="version">Beta Release</span>
-                <h3>AR Smart Hub</h3>
-                <p>The central command center for all AR Smart World applications and updates.</p>
-                <a href="#" class="dl-btn">Download Now</a>
+                <span class="version-tag">Beta Access</span>
+                <h3>Smart Hub Core</h3>
+                <p>The central update platform for all AR Smart World technological tools.</p>
+                <a href="#" class="dl-btn">Download Beta</a>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 AR Smart World. All downloads are verified and secure.</p>
+        <p>&copy; 2026 AR Smart World. All software builds are verified for security.</p>
     </footer>
 
 </body>

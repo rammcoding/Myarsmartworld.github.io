@@ -9,12 +9,18 @@
         :root {
             --primary: #0f172a;
             --accent: #3b82f6;
-            --bg: #ffffff;
-            --card-bg: #f8fafc;
+            --bg-pale: #f9fafb; /* The Pale White */
+            --card-bg: #ffffff;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; background: #fff; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #1e293b; 
+            line-height: 1.6; 
+            background-color: var(--bg-pale); 
+        }
 
         /* Navigation */
         nav {
@@ -31,8 +37,13 @@
         .nav-logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 800; }
         .nav-logo img { height: 40px; margin-right: 10px; }
 
+        .nav-links { display: flex; align-items: center; }
         .nav-links a { margin-left: 20px; text-decoration: none; color: #64748b; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--accent); }
+        
+        .buy-link { color: #10b981 !important; font-weight: 700 !important; }
+        .signup-btn { background: var(--accent); color: white !important; padding: 8px 18px; border-radius: 5px; }
+        .signup-btn:hover { background: #2563eb !important; }
 
         /* Hero Section */
         header { 
@@ -51,6 +62,7 @@
         .software-card { 
             background: var(--card-bg); padding: 30px; border-radius: 15px; 
             transition: 0.3s; border: 1px solid #e2e8f0; position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
         .software-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .version-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; }
@@ -63,38 +75,33 @@
         }
         .dl-btn:hover { background: #2563eb; }
 
-        footer { background: #f1f5f9; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid #e2e8f0; }
+        /* Subscribe Section */
+        .subscribe-section { background: #f1f5f9; padding: 80px 20px; text-align: center; border-top: 1px solid #e2e8f0; }
+        .sub-input { padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; width: 280px; margin-right: 10px; outline: none; }
+
+        footer { background: #ffffff; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="nav-logo">
+        <a href="index.html" class="nav-logo">
             <img src="logo.png" alt="AR Smart World Logo">
             <span>AR SMART WORLD</span>
         </a>
         <div class="nav-links">
             <a href="#software">Software</a>
-            <a href="#updates">Updates</a>
-            <a href="mailto:contact@arsmartworld.com">Contact</a>
+            <a href="license.html" class="buy-link">Buy License</a>
+            <a href="#subscribe">Subscribe</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
         </div>
-        <div class="nav-links">
-    <a href="#software">Software</a>
-    <a href="license.html" style="color: #10b981; font-weight: 700;">Buy License</a> <a href="mailto:contact@arsmartworld.com">Contact</a>
-</div>
-        <div class="nav-links">
-    <a href="#software">Software</a>
-    <a href="license.html">Buy License</a>
-    <a href="#subscribe">Subscribe</a>
-    <a href="signup.html" style="background: var(--accent); color: white; padding: 8px 18px; border-radius: 5px;">Sign Up</a>
-</div>
     </nav>
 
     <header>
         <img src="logo.png" alt="AR Smart World" class="main-logo">
         <div class="hero-content">
             <h1>Innovation & Intelligence</h1>
-            <p>New generation software builds and technological updates. Download our latest releases below.</p>
+            <p>New generation software builds and technological updates. Join our community to access exclusive downloads.</p>
         </div>
     </header>
 
@@ -105,24 +112,35 @@
                 <span class="version-tag">Build: 2026.1</span>
                 <h3>System Optimizer</h3>
                 <p>New generation software build for high-performance computing and system stability.</p>
-                <a href="#" class="dl-btn">Download Update</a>
+                <a href="signup.html" class="dl-btn">Sign Up to Download</a>
             </div>
 
             <div class="software-card">
                 <span class="version-tag">Build: 2026.1</span>
                 <h3>Secure Connect</h3>
                 <p>Advanced encryption update to ensure safe data transfers and user privacy.</p>
-                <a href="#" class="dl-btn">Download Update</a>
+                <a href="signup.html" class="dl-btn">Sign Up to Download</a>
             </div>
 
             <div class="software-card">
                 <span class="version-tag">Beta Access</span>
                 <h3>Smart Hub Core</h3>
                 <p>The central update platform for all AR Smart World technological tools.</p>
-                <a href="#" class="dl-btn">Download Beta</a>
+                <a href="signup.html" class="dl-btn">Sign Up to Download</a>
             </div>
         </div>
     </div>
+
+    <section id="subscribe" class="subscribe-section">
+        <div class="container" style="padding: 0;">
+            <h2>Stay Updated</h2>
+            <p style="margin-bottom: 30px;">Get notified the moment a new software update or license deal is released.</p>
+            <form action="#" method="POST">
+                <input type="email" class="sub-input" placeholder="Enter your email" required>
+                <button type="submit" class="dl-btn" style="width: auto; margin-top: 0;">Subscribe Now</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 AR Smart World. All software builds are verified for security.</p>
@@ -130,5 +148,3 @@
 
 </body>
 </html>
-
-

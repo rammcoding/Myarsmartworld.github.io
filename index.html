@@ -9,7 +9,7 @@
         :root {
             --primary: #0f172a;
             --accent: #3b82f6;
-            --bg-pale: #f9fafb; /* The Pale White */
+            --bg-light-grey: #f3f4f6; /* Modern Light Grey */
             --card-bg: #ffffff;
         }
 
@@ -19,10 +19,10 @@
             font-family: 'Inter', sans-serif; 
             color: #1e293b; 
             line-height: 1.6; 
-            background-color: var(--bg-pale); 
+            background-color: var(--bg-light-grey); 
         }
 
-        /* Navigation */
+        /* Navigation - FIXED to show links only once */
         nav {
             display: flex;
             justify-content: space-between;
@@ -60,11 +60,11 @@
 
         .software-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .software-card { 
-            background: var(--card-bg); padding: 30px; border-radius: 15px; 
-            transition: 0.3s; border: 1px solid #e2e8f0; position: relative;
+            background: var(--card-bg); padding: 35px; border-radius: 15px; 
+            transition: 0.3s; border: 1px solid #e5e7eb; position: relative;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
-        .software-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .software-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
         .version-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; }
         .software-card h3 { margin: 10px 0; font-size: 1.4rem; }
         
@@ -76,10 +76,10 @@
         .dl-btn:hover { background: #2563eb; }
 
         /* Subscribe Section */
-        .subscribe-section { background: #f1f5f9; padding: 80px 20px; text-align: center; border-top: 1px solid #e2e8f0; }
-        .sub-input { padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; width: 280px; margin-right: 10px; outline: none; }
+        .subscribe-section { background: #e5e7eb; padding: 80px 20px; text-align: center; border-top: 1px solid #d1d5db; }
+        .sub-input { padding: 12px; border-radius: 8px; border: 1px solid #9ca3af; width: 280px; margin-right: 10px; outline: none; }
 
-        footer { background: #ffffff; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid #e2e8f0; }
+        footer { background: #ffffff; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid #e5e7eb; }
     </style>
 </head>
 <body>
@@ -101,7 +101,7 @@
         <img src="logo.png" alt="AR Smart World" class="main-logo">
         <div class="hero-content">
             <h1>Innovation & Intelligence</h1>
-            <p>New generation software builds and technological updates. Join our community to access exclusive downloads.</p>
+            <p>Download new generation software builds and technological updates. Join us to access the latest releases.</p>
         </div>
     </header>
 
@@ -111,21 +111,21 @@
             <div class="software-card">
                 <span class="version-tag">Build: 2026.1</span>
                 <h3>System Optimizer</h3>
-                <p>New generation software build for high-performance computing and system stability.</p>
+                <p>Improve hardware performance and system stability with our new generation algorithms.</p>
                 <a href="signup.html" class="dl-btn">Sign Up to Download</a>
             </div>
 
             <div class="software-card">
                 <span class="version-tag">Build: 2026.1</span>
                 <h3>Secure Connect</h3>
-                <p>Advanced encryption update to ensure safe data transfers and user privacy.</p>
+                <p>Advanced encryption update ensuring safe data transfers and total user privacy.</p>
                 <a href="signup.html" class="dl-btn">Sign Up to Download</a>
             </div>
 
             <div class="software-card">
                 <span class="version-tag">Beta Access</span>
                 <h3>Smart Hub Core</h3>
-                <p>The central update platform for all AR Smart World technological tools.</p>
+                <p>The central command platform for all AR Smart World technological tools.</p>
                 <a href="signup.html" class="dl-btn">Sign Up to Download</a>
             </div>
         </div>
@@ -134,7 +134,7 @@
     <section id="subscribe" class="subscribe-section">
         <div class="container" style="padding: 0;">
             <h2>Stay Updated</h2>
-            <p style="margin-bottom: 30px;">Get notified the moment a new software update or license deal is released.</p>
+            <p style="margin-bottom: 30px;">Be the first to know when a new software build or product key becomes available.</p>
             <form action="#" method="POST">
                 <input type="email" class="sub-input" placeholder="Enter your email" required>
                 <button type="submit" class="dl-btn" style="width: auto; margin-top: 0;">Subscribe Now</button>

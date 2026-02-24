@@ -3,39 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Smart World | Coming Soon</title>
+    <title>AR Smart World | Intelligent Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #1e3c72;
+            --secondary: #2a5298;
+            --accent: #00d2ff;
+            --text: #333;
+            --light: #f8f9fa;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white; height: 100vh; display: flex; 
-            justify-content: center; align-items: center; text-align: center;
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: white; scroll-behavior: smooth; }
+
+        /* Navigation */
+        nav { 
+            background: white; padding: 20px; position: fixed; width: 100%; top: 0; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000;
         }
-        .container { padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); max-width: 600px; margin: 20px; }
-        h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: 2px; }
-        p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
-        .badge { background: #4CAF50; color: white; padding: 5px 15px; border-radius: 50px; font-size: 0.9rem; margin-bottom: 20px; display: inline-block; }
-        .contact-btn { 
-            text-decoration: none; background: white; color: #1e3c72; 
-            padding: 12px 30px; border-radius: 50px; font-weight: bold; 
-            transition: 0.3s; display: inline-block;
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
+        .nav-links a { margin-left: 25px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero { 
+            height: 100vh; background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; color: white; padding: 20px;
         }
-        .contact-btn:hover { transform: scale(1.05); background: #f0f0f0; }
-        footer { position: absolute; bottom: 20px; font-size: 0.8rem; opacity: 0.6; }
+        .hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; line-height: 1.1; }
+        .hero p { font-size: 1.25rem; max-width: 600px; margin-bottom: 30px; opacity: 0.9; }
+
+        /* Section Container */
+        .section { padding: 100px 20px; max-width: 1100px; margin: auto; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary); }
+
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { 
+            background: var(--light); padding: 40px; border-radius: 15px; 
+            transition: 0.3s; border: 1px solid #eee;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .card h3 { margin-bottom: 15px; color: var(--primary); }
+
+        /* CTA Button */
+        .btn { 
+            background: var(--accent); color: white; padding: 15px 40px; 
+            border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s;
+        }
+        .btn:hover { background: #00b8e6; transform: scale(1.05); }
+
+        /* Footer */
+        footer { background: #111; color: #777; padding: 50px 20px; text-align: center; }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified for now */
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="badge">✓ SSL Secure Connection</div>
-        <h1>AR SMART WORLD</h1>
-        <p>Innovation meets intelligence. We are currently building a new digital experience for you. Stay tuned!</p>
-        <a href="mailto:your-email@example.com" class="contact-btn">Contact Us</a>
-    </div>
+    <nav>
+        <a href="#" class="logo">AR SMART WORLD</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Innovation for a<br>Smarter World</h1>
+        <p>Providing cutting-edge digital infrastructure and smart solutions for the modern era.</p>
+        <a href="#contact" class="btn">Get Started Today</a>
+    </header>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Our Mission</h2>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 800px; margin: auto;">
+            AR Smart World is more than just a technology provider. We bridge the gap between complex digital challenges and intuitive user experiences. Our goal is to ensure your business stays ahead in an ever-evolving digital landscape.
+        </p>
+    </section>
+
+    <section id="services" class="section" style="background: #fafafa; max-width: 100%;">
+        <div style="max-width: 1100px; margin: auto;">
+            <h2 class="section-title">Professional Services</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>Smart Infrastructure</h3>
+                    <p>Building secure, scalable, and modern digital environments for businesses of all sizes.</p>
+                </div>
+                <div class="card">
+                    <h3>Digital Consulting</h3>
+                    <p>Strategizing your move to the cloud with expert guidance and proven methodologies.</p>
+                </div>
+                <div class="card">
+                    <h3>Security First</h3>
+                    <p>All our projects include end-to-end encryption and SSL protection as standard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Let's Connect</h2>
+        <div style="text-align: center;">
+            <p style="margin-bottom: 30px;">Ready to start your project? We're here to help.</p>
+            <a href="mailto:contact@arsmartworld.com" class="btn" style="background: var(--primary);">Email Us Now</a>
+        </div>
+    </section>
 
     <footer>
-        &copy; 2026 AR Smart World. All Rights Reserved.
+        <p>&copy; 2026 AR Smart World. Protected by SSL Encryption.</p>
     </footer>
 
 </body>

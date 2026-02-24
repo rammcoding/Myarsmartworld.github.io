@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Coming Soon</title>
+    <title>AR Smart World | Coming Soon</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white; height: 100vh; display: flex; 
+            justify-content: center; align-items: center; text-align: center;
         }
-        .container {
-            text-align: center;
-            padding: 50px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .container { padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); max-width: 600px; margin: 20px; }
+        h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: 2px; }
+        p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        .badge { background: #4CAF50; color: white; padding: 5px 15px; border-radius: 50px; font-size: 0.9rem; margin-bottom: 20px; display: inline-block; }
+        .contact-btn { 
+            text-decoration: none; background: white; color: #1e3c72; 
+            padding: 12px 30px; border-radius: 50px; font-weight: bold; 
+            transition: 0.3s; display: inline-block;
         }
-        h1 { color: #2c3e50; }
-        p { font-size: 1.2rem; }
-        .lock-icon { font-size: 3rem; color: #27ae60; }
+        .contact-btn:hover { transform: scale(1.05); background: #f0f0f0; }
+        footer { position: absolute; bottom: 20px; font-size: 0.8rem; opacity: 0.6; }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="lock-icon">🔒</div>
-        <h1>Connection Secured</h1>
-        <p>Our website is currently being moved to a more secure server.</p>
-        <p><strong>Your GoDaddy domain is now protected by SSL.</strong></p>
-        <p><strong>am witing to see my website.</strong></p>
+        <div class="badge">✓ SSL Secure Connection</div>
+        <h1>AR SMART WORLD</h1>
+        <p>Innovation meets intelligence. We are currently building a new digital experience for you. Stay tuned!</p>
+        <a href="mailto:your-email@example.com" class="contact-btn">Contact Us</a>
     </div>
+
+    <footer>
+        &copy; 2026 AR Smart World. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
-

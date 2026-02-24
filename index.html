@@ -3,123 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Smart World | Intelligent Solutions</title>
+    <title>AR Smart World | Software & Innovation</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3c72;
-            --secondary: #2a5298;
-            --accent: #00d2ff;
-            --text: #333;
-            --light: #f8f9fa;
+            --primary: #0f172a;
+            --accent: #3b82f6;
+            --bg: #ffffff;
+            --card-bg: #f1f5f9;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: white; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; }
 
-        /* Navigation */
-        nav { 
-            background: white; padding: 20px; position: fixed; width: 100%; top: 0; 
-            display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000;
+        /* Header */
+        header { 
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center;
+            color: white; padding: 120px 20px; text-align: center;
         }
-        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
-        .nav-links a { margin-left: 25px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero-content p { font-size: 1.2rem; max-width: 700px; margin: auto; opacity: 0.9; }
 
-        /* Hero Section */
-        .hero { 
-            height: 100vh; background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; color: white; padding: 20px;
+        /* Section Styling */
+        .container { max-width: 1100px; margin: auto; padding: 80px 20px; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; color: var(--primary); }
+
+        /* Software Grid */
+        .software-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .software-card { 
+            background: var(--card-bg); padding: 30px; border-radius: 20px; 
+            transition: 0.3s; border: 1px solid #e2e8f0;
         }
-        .hero h1 { font-size: 4rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; line-height: 1.1; }
-        .hero p { font-size: 1.25rem; max-width: 600px; margin-bottom: 30px; opacity: 0.9; }
-
-        /* Section Container */
-        .section { padding: 100px 20px; max-width: 1100px; margin: auto; }
-        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary); }
-
-        /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { 
-            background: var(--light); padding: 40px; border-radius: 15px; 
-            transition: 0.3s; border: 1px solid #eee;
+        .software-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .version { color: var(--accent); font-weight: bold; font-size: 0.9rem; }
+        .software-card h3 { margin: 10px 0; font-size: 1.5rem; }
+        
+        /* Download Button */
+        .dl-btn { 
+            display: inline-block; background: var(--accent); color: white; 
+            padding: 10px 25px; border-radius: 8px; text-decoration: none; 
+            font-weight: 600; margin-top: 20px; transition: 0.3s;
         }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { margin-bottom: 15px; color: var(--primary); }
-
-        /* CTA Button */
-        .btn { 
-            background: var(--accent); color: white; padding: 15px 40px; 
-            border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s;
-        }
-        .btn:hover { background: #00b8e6; transform: scale(1.05); }
+        .dl-btn:hover { background: #2563eb; }
 
         /* Footer */
-        footer { background: #111; color: #777; padding: 50px 20px; text-align: center; }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Simplified for now */
-        }
+        footer { background: var(--primary); color: #94a3b8; padding: 40px; text-align: center; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">AR SMART WORLD</a>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+    <header>
+        <div class="hero-content">
+            <h1>AR SMART WORLD</h1>
+            <p>Next-Generation Software Development & Innovative Technological Solutions. Stay updated with our latest releases.</p>
         </div>
-    </nav>
-
-    <header class="hero">
-        <h1>Innovation for a<br>Smarter World</h1>
-        <p>Providing cutting-edge digital infrastructure and smart solutions for the modern era.</p>
-        <a href="#contact" class="btn">Get Started Today</a>
     </header>
 
-    <section id="about" class="section">
-        <h2 class="section-title">About Our Mission</h2>
-        <p style="text-align: center; font-size: 1.1rem; color: #666; max-width: 800px; margin: auto;">
-            AR Smart World is more than just a technology provider. We bridge the gap between complex digital challenges and intuitive user experiences. Our goal is to ensure your business stays ahead in an ever-evolving digital landscape.
-        </p>
-    </section>
+    <div class="container" id="software">
+        <h2>Latest Software & Updates</h2>
+        <div class="software-grid">
+            <div class="software-card">
+                <span class="version">Latest Update: v2.4</span>
+                <h3>System Optimizer</h3>
+                <p>Improve your hardware performance with our new generation optimization algorithm.</p>
+                <a href="#" class="dl-btn">Download Now</a>
+            </div>
 
-    <section id="services" class="section" style="background: #fafafa; max-width: 100%;">
-        <div style="max-width: 1100px; margin: auto;">
-            <h2 class="section-title">Professional Services</h2>
-            <div class="services-grid">
-                <div class="card">
-                    <h3>Smart Infrastructure</h3>
-                    <p>Building secure, scalable, and modern digital environments for businesses of all sizes.</p>
-                </div>
-                <div class="card">
-                    <h3>Digital Consulting</h3>
-                    <p>Strategizing your move to the cloud with expert guidance and proven methodologies.</p>
-                </div>
-                <div class="card">
-                    <h3>Security First</h3>
-                    <p>All our projects include end-to-end encryption and SSL protection as standard.</p>
-                </div>
+            <div class="software-card">
+                <span class="version">Update: v1.0.2</span>
+                <h3>Secure Connect</h3>
+                <p>Encryption software designed to protect your data across all digital platforms.</p>
+                <a href="#" class="dl-btn">Download Now</a>
+            </div>
+
+            <div class="software-card">
+                <span class="version">Beta Release</span>
+                <h3>AR Smart Hub</h3>
+                <p>The central command center for all AR Smart World applications and updates.</p>
+                <a href="#" class="dl-btn">Download Now</a>
             </div>
         </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2 class="section-title">Let's Connect</h2>
-        <div style="text-align: center;">
-            <p style="margin-bottom: 30px;">Ready to start your project? We're here to help.</p>
-            <a href="mailto:contact@arsmartworld.com" class="btn" style="background: var(--primary);">Email Us Now</a>
-        </div>
-    </section>
+    </div>
 
     <footer>
-        <p>&copy; 2026 AR Smart World. Protected by SSL Encryption.</p>
+        <p>&copy; 2026 AR Smart World. All downloads are verified and secure.</p>
     </footer>
 
 </body>

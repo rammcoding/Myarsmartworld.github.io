@@ -22,7 +22,7 @@ line-height: 1.6;
 background-color: var(--bg-light-grey); 
 }
 
-/* Navigation */
+/* Navigation - FIXED to show links only once */
 nav {
 display: flex;
 justify-content: space-between;
@@ -45,7 +45,7 @@ z-index: 1000;
 .signup-btn { background: var(--accent); color: white !important; padding: 8px 18px; border-radius: 5px; }
 .signup-btn:hover { background: #2563eb !important; }
 
-/* Hero Section - Exact match to Home Page (index.html) */
+/* Hero Section */
 header { 
 background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
 color: white; padding: 100px 20px; text-align: center;
@@ -53,14 +53,15 @@ color: white; padding: 100px 20px; text-align: center;
 .main-logo { 
 width: 180px; 
 margin-bottom: 20px; 
-border-radius: 50%; 
+border-radius: 50%; /* Made main header logo round */
 box-shadow: 0 0 30px rgba(59, 130, 246, 0.5); 
 }
 .hero-content h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -1px; }
 .hero-content p { font-size: 1.1rem; max-width: 600px; margin: auto; opacity: 0.8; margin-bottom: 30px; }
 
-/* Main Content */
+/* Content */
 .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
+h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: var(--primary); }
 
 .about-section {
 background: var(--card-bg);
@@ -70,8 +71,6 @@ border: 1px solid #e5e7eb;
 box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 margin-bottom: 40px;
 }
-
-h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: var(--primary); position: relative; padding-bottom: 8px; }
 
 p { margin-bottom: 20px; color: #475569; font-size: 1.05rem; }
 
@@ -99,7 +98,7 @@ footer { background: #ffffff; color: #64748b; padding: 40px; text-align: center;
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="about.html">About us</a>
-<a href="index.html#software">Software</a>
+<a href="#software">Software</a>
 <a href="license.html" class="buy-link">Buy Licenses</a>
 <a href="signup.html" class="signup-btn">Sign Up</a>
 </div>

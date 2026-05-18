@@ -4,20 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>License Store | AR Smart World</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #0f172a; --accent: #3b82f6; --card-bg: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; margin: 0; }
+        :root { 
+            --primary: #0f172a; 
+            --accent: #3b82f6; 
+            --bg-light-grey: #f3f4f6; /* Modern Light Grey */
+            --card-bg: #ffffff; 
+        }
         
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .nav-logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 800; }
-        .nav-logo img { height: 30px; margin-right: 10px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #1e293b; 
+            line-height: 1.6; 
+            background-color: var(--bg-light-grey); 
+        }
+        
+        /* Navigation - Exactly matched to Home/Index Page */
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 15px 5%; 
+            background: white; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; color: var(--primary); font-weight: 800; }
+        .nav-logo img { height: 50px; margin-right: 10px; border-radius: 50%; }
+
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { margin-left: 20px; text-decoration: none; color: #64748b; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .buy-link { color: #10b981 !important; font-weight: 700 !important; }
+        .signup-btn { background: var(--accent); color: white !important; padding: 8px 18px; border-radius: 5px; }
+        .signup-btn:hover { background: #2563eb !important; }
+
+        /* Hero Section - Exactly matched to Home/Index Page */
+        header { 
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            color: white; padding: 100px 20px; text-align: center;
+        }
+        .main-logo { 
+            width: 180px; 
+            margin-bottom: 20px; 
+            border-radius: 50%; 
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5); 
+        }
+        .hero-content h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -1px; }
+        .hero-content p { font-size: 1.1rem; max-width: 600px; margin: auto; opacity: 0.8; margin-bottom: 30px; }
+
+        /* Content */
         .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
-        h1 { text-align: center; color: var(--primary); margin-bottom: 40px; }
+        h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; color: var(--primary); }
 
         .license-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .license-card { background: var(--card-bg); border: 1px solid #e2e8f0; padding: 30px; border-radius: 15px; text-align: center; }
+        .license-card { 
+            background: var(--card-bg); 
+            border: 1px solid #e2e8f0; 
+            padding: 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: 0.3s;
+        }
+        .license-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
         .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin: 15px 0; }
         
         .buy-btn { 
@@ -25,41 +81,58 @@
             padding: 12px 24px; border-radius: 8px; text-decoration: none; 
             font-weight: 600; width: 100%; transition: 0.3s;
         }
-        .buy-btn:hover { background: #059669; transform: translateY(-2px); }
+        .buy-btn:hover { background: #059669; }
         .back-link { display: block; text-align: center; margin-top: 40px; color: var(--accent); text-decoration: none; font-weight: 600; }
+
+        footer { background: #ffffff; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid #e5e7eb; }
     </style>
 </head>
 <body>
 
     <nav>
         <a href="index.html" class="nav-logo">
-            <img src="logo.png" alt="AR Smart World">
+            <img src="logo.png" alt="AR Smart World Logo">
             <span>AR SMART WORLD</span>
         </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="index.html#software">Software</a>
+            <a href="license.html" class="buy-link">Buy Licenses</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
     </nav>
 
+    <header>
+        <img src="logo.png" alt="AR Smart World" class="main-logo">
+        <div class="hero-content">
+            <h1>Innovation & Intelligence</h1>
+            <p>Download new generation software builds and technological updates. Join us to access the latest releases.</p>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>Product License Store</h1>
-        <p style="text-align: center; margin-bottom: 40px;">Get authentic product keys for AR Smart World softwares.</p>
+        <h2>Product License Store</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #64748b;">Get authentic product keys for AR Smart World softwares.</p>
         
         <div class="license-grid">
             <div class="license-card">
                 <h3>System Optimizer Pro</h3>
-                <p>Lifetime License Key</p>
+                <p style="color: #64748b; margin-top: 5px;">Lifetime License Key</p>
                 <div class="price">$19.99</div>
                 <a href="#" class="buy-btn">Buy License Key</a>
             </div>
 
             <div class="license-card">
                 <h3>Secure Connect VPN</h3>
-                <p>1 Year Subscription</p>
+                <p style="color: #64748b; margin-top: 5px;">1 Year Subscription</p>
                 <div class="price">$29.99</div>
                 <a href="#" class="buy-btn">Buy Product Key</a>
             </div>
 
             <div class="license-card">
                 <h3>Smart Hub Premium</h3>
-                <p>Multi-Device License</p>
+                <p style="color: #64748b; margin-top: 5px;">Multi-Device License</p>
                 <div class="price">$49.99</div>
                 <a href="#" class="buy-btn">Buy License Key</a>
             </div>
@@ -67,6 +140,10 @@
 
         <a href="index.html" class="back-link">← Back to Main Website</a>
     </div>
+
+    <footer>
+        <p>&copy; 2026 AR Smart World. All software builds are verified for security.</p>
+    </footer>
 
 </body>
 </html>

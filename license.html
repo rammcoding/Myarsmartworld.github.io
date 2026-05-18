@@ -4,25 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>License Store | AR Smart World</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --primary: #0f172a; 
-            --accent: #3b82f6; 
-            --bg-light-grey: #f3f4f6; /* Modern Light Grey from About page */
-            --card-bg: #f8fafc; 
-        }
+        :root { --primary: #0f172a; --accent: #3b82f6; --card-bg: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; margin: 0; }
         
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-            color: #1e293b; 
-            line-height: 1.6; 
-            background-color: var(--bg-light-grey); 
-        }
-        
-        /* Navigation - Exactly matched to About page */
+        /* Navigation - Exactly matched to Main and About page header rules */
         nav { 
             display: flex; 
             justify-content: space-between; 
@@ -45,12 +32,11 @@
         .signup-btn { background: var(--accent); color: white !important; padding: 8px 18px; border-radius: 5px; }
         .signup-btn:hover { background: #2563eb !important; }
 
-        /* Container & Grid Body Layout styles completely preserved */
         .container { max-width: 1000px; margin: auto; padding: 60px 20px; }
         h1 { text-align: center; color: var(--primary); margin-bottom: 40px; }
 
         .license-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .license-card { background: #ffffff; border: 1px solid #e2e8f0; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .license-card { background: var(--card-bg); border: 1px solid #e2e8f0; padding: 30px; border-radius: 15px; text-align: center; }
         .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin: 15px 0; }
         
         .buy-btn { 
@@ -60,8 +46,6 @@
         }
         .buy-btn:hover { background: #059669; transform: translateY(-2px); }
         .back-link { display: block; text-align: center; margin-top: 40px; color: var(--accent); text-decoration: none; font-weight: 600; }
-
-        footer { background: #ffffff; color: #64748b; padding: 40px; text-align: center; border-top: 1px solid #e5e7eb; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -109,10 +93,6 @@
 
         <a href="index.html" class="back-link">← Back to Main Website</a>
     </div>
-
-    <footer>
-        <p>&copy; 2026 AR Smart World. All software builds are verified for security.</p>
-    </footer>
 
 </body>
 </html>
